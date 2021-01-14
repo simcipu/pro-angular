@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CustomerComponent } from './customer/customer.component';
 import { NewProductComponent } from './new-product/new-product.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NewProductComponent } from './new-product/new-product.component';
     HttpClientModule,
     AppRoutingModule,
     MatSliderModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],
