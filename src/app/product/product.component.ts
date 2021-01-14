@@ -1,5 +1,5 @@
 
-import { Component, OnDestroy, OnInit ,Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Product} from "../classes/Product";
 import {ProductService} from "../services/product.service";

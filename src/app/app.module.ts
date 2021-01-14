@@ -8,13 +8,15 @@ import { ProductComponent } from './product/product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CustomerComponent } from './customer/customer.component';
+import { NewProductComponent } from './new-product/new-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     ProductComponent,
-    CustomerComponent
+    CustomerComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
