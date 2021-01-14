@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,OnDestroy} from '@angular/core';
 import {Product} from "../classes/Product";
 import {ProductService} from "../services/product.service";
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 import { Customer } from '../classes/Customer';
+import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-new-product',
@@ -24,13 +25,11 @@ export class NewProductComponent implements OnInit {
   saveProduct():void{
 
 this.service.save(this.prod).subscribe(param=> console.log(param));
- 
   }
 
   comeBack():void{
 
     this.router.navigate(['product']);
-
   }
 
   reset() {
@@ -40,10 +39,16 @@ this.service.save(this.prod).subscribe(param=> console.log(param));
 
   gotoNewCustmer() {
    this.show=true;
+   if(this.cust.name!=''){
  this.prod.customer.push(this.cust);
+   }
    console.log(this.prod);
    this.cust=new Customer();
-   //this.cust=new Customer();
+  }
+
+  OnDestroy(){
+
+    this.service.save(this.prod).subscribe().unsubscribe();
   }
 
 }
