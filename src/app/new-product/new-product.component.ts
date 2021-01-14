@@ -10,17 +10,21 @@ import { Customer } from '../classes/Customer';
   styleUrls: ['./new-product.component.css']
 })
 export class NewProductComponent implements OnInit {
-  customer!:Customer[];
+  customer=new Array<Customer>();
+  cust!:Customer;
   prod!:Product;
-  constructor(private service:ProductService,private route: ActivatedRoute,private router: Router) { }
-
+  constructor(private service:ProductService,private router: Router) { }
+  show!:boolean;
   ngOnInit(): void {
+  
   this.prod=new Product('','','',this.customer);
+  this.cust=new Customer();
   }
 
   saveProduct():void{
 
 this.service.save(this.prod).subscribe(param=> console.log(param));
+ 
   }
 
   comeBack():void{
@@ -30,8 +34,16 @@ this.service.save(this.prod).subscribe(param=> console.log(param));
   }
 
   reset() {
-   
+    this.show=false;
     window.location.reload();
+  }
+
+  gotoNewCustmer() {
+   this.show=true;
+ this.prod.customer.push(this.cust);
+   console.log(this.prod);
+   this.cust=new Customer();
+   //this.cust=new Customer();
   }
 
 }

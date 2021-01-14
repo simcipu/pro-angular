@@ -11,6 +11,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import {FormsModule} from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

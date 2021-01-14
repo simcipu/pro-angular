@@ -5,11 +5,11 @@ import { ProductComponent } from './product/product.component';
 import {NewProductComponent } from './new-product/new-product.component';
 
 
+
 const routes: Routes = [
 
 
   {
-   
     path: 'product',
     component: ProductComponent
   },  {
