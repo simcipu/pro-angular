@@ -27,8 +27,8 @@ this.service.getProduct().subscribe(response =>
     {
       return new Product( 
           item.serialNumber,
-          item.name,
           item.type,
+          item.name,
           item.customer
       );
     });

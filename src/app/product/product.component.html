@@ -6,8 +6,8 @@
     <thead>
       <tr>
         <th scope="col">Serial Number</th>
-        <th scope="col">Nome</th>
         <th scope="col">Tipo</th>
+        <th scope="col">Nome</th>
         <th scope="col">Customers</th>
         <th scope="col">Delete</th>
         <th scope="col">Modifica</th>
@@ -19,8 +19,8 @@
         <tr *ngFor="let emp of product">
          
           <td>{{ emp.serialNumber }}</td>
-          <td>{{ emp.name }}</td>
           <td>{{ emp.type }}</td>
+          <td>{{ emp.name }}</td>
          <td><button class="btn btn-link" (click)="open(emp.serialNumber)">Show Customer</button></td>
          <td><button class="btn btn-link" (click)="delete(emp.serialNumber)">Elimina</button></td>
          <td><button class="btn btn-link" (click)="modifica(emp.serialNumber)">Modifica</button></td>

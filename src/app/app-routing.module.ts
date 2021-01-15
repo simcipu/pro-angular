@@ -4,6 +4,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { ProductComponent } from './product/product.component';
 import {NewProductComponent } from './new-product/new-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { CercaProductComponent } from './cerca-product/cerca-product.component';
 
 
 
@@ -30,6 +31,11 @@ const routes: Routes = [
    
     path: 'update/product/:serialNumber',
     component: UpdateProductComponent
+  },
+  {
+   
+    path: 'cerca',
+    component: CercaProductComponent
   }
 ];
 

@@ -11,6 +11,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import {FormsModule} from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { CercaProductComponent } from './cerca-product/cerca-product.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ProductComponent,
     CustomerComponent,
     NewProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    CercaProductComponent
   ],
   imports: [
     BrowserModule,
