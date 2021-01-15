@@ -24,14 +24,15 @@ export class CercaProductComponent implements OnInit {
 
 
   cerca(surname:string,type:string){
-
+    this.product=new Array<Product>();
 this.service.getForType(type).subscribe(param=> {
-  
-  this.product=param
+
   console.log(param);
 if(this.product===null){
-  this.product=new Array<Product>();
+  this.show=false;
 }else{
+
+  param.forEach(p => this.product.push(p));
   this.show=true;
 }
 
@@ -39,11 +40,13 @@ if(this.product===null){
 
 this.service.getForSurname(surname).subscribe(param=>{
 
-  this.product=param
+  
   console.log(param);
 if(this.product===null){
-  this.product=new Array<Product>();
+  this.show=false;
 }else{
+ 
+  param.forEach(p => this.product.push(p));
   this.show=true;
 }
 
