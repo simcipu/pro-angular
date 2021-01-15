@@ -13,8 +13,8 @@ export class UpdateProductComponent implements OnInit {
   prod!:Product;
   id!:string;
   show!:boolean;
-  
   customer=new Array<Customer>();
+  
   constructor(private service:ProductService,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
@@ -24,8 +24,6 @@ this.show=false;
    
       this.id=params['serialNumber'];
      console.log(this.id);
-
-  /* */
  
     });
 
@@ -41,7 +39,6 @@ this.show=false;
         }
    
       });
-
   }
 
 
