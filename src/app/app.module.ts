@@ -10,6 +10,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { CustomerComponent } from './customer/customer.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import {FormsModule} from '@angular/forms';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {FormsModule} from '@angular/forms';
     NavComponent,
     ProductComponent,
     CustomerComponent,
-    NewProductComponent
+    NewProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

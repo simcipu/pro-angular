@@ -12,6 +12,7 @@ export class ProductService {
   private urlId = 'http://localhost:8080/mongo/get/id';
   private deleteurlId = 'http://localhost:8080/mongo/delete';
   private urlsave = 'http://localhost:8080/mongo/save';
+  private urlupdate = 'http://localhost:8080/mongo/update';
   prodotto:Product[]=[];
   constructor(private http: HttpClient) { }
 
@@ -35,5 +36,10 @@ export class ProductService {
   public save(product:Product): Observable<boolean>{
 
     return this.http.put<boolean>(this.urlsave,product);
+  }
+
+  public update(product:Product): Observable<boolean>{
+
+    return this.http.post<boolean>(this.urlupdate,product);
   }
 }

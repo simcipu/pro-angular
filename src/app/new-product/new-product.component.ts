@@ -3,7 +3,7 @@ import {Product} from "../classes/Product";
 import {ProductService} from "../services/product.service";
 import { Router} from '@angular/router';
 import { Customer } from '../classes/Customer';
-import { IfStmt } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-new-product',
@@ -23,7 +23,9 @@ export class NewProductComponent implements OnInit {
   }
 
   saveProduct():void{
-
+    if(this.cust.name!=''){
+      this.prod.customer.push(this.cust);
+        }
 this.service.save(this.prod).subscribe(param=> console.log(param));
   }
 

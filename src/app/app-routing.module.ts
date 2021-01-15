@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomerComponent } from './customer/customer.component';
 import { ProductComponent } from './product/product.component';
 import {NewProductComponent } from './new-product/new-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -24,6 +25,11 @@ const routes: Routes = [
    
     path: 'product/add',
     component: NewProductComponent
+  },
+  {
+   
+    path: 'update/product/:serialNumber',
+    component: UpdateProductComponent
   }
 ];
 

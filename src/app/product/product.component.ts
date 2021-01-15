@@ -1,6 +1,5 @@
-
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 import {Product} from "../classes/Product";
 import {ProductService} from "../services/product.service";
 
@@ -16,7 +15,7 @@ export class ProductComponent implements OnInit,OnDestroy {
 
   constructor(private service:ProductService,private router: Router) { }
   ngOnDestroy(): void {
-    //this.service.getProduct().subscribe().unsubscribe;
+    this.service.getProduct().subscribe().unsubscribe;
   
   }
 
@@ -45,6 +44,12 @@ open(id:string) {
 delete(id:string) {
   this.service.deleteById(id).subscribe(param=> console.log(param));
   window.location.reload();
+}
+
+modifica(id:string){
+
+  this.router.navigate(['update/product', id]);
+
 }
 
 
